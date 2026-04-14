@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.13](https://github.com/archestra-ai/archestra/compare/platform-v1.2.12...platform-v1.2.13) (2026-04-14)
+
+
+### Features
+
+* **auth:** add hosted domain hint to google sso ([#3758](https://github.com/archestra-ai/archestra/issues/3758)) ([efbf5e9](https://github.com/archestra-ai/archestra/commit/efbf5e980fb7388c1077a723b9d13996c248f085))
+
+
+### Bug Fixes
+
+* MCP OAuth discovery rewrite ([#3755](https://github.com/archestra-ai/archestra/issues/3755)) ([e3f73d0](https://github.com/archestra-ai/archestra/commit/e3f73d049787f5f9d63e38fa050ee3a327a387c8))
+* MCP reinstall prompts and config autofill ([#3759](https://github.com/archestra-ai/archestra/issues/3759)) ([881c176](https://github.com/archestra-ai/archestra/commit/881c1760f80bf491a42aee7a0b201584cf2e237c))
+
 ## [1.2.12](https://github.com/archestra-ai/archestra/compare/platform-v1.2.11...platform-v1.2.12) (2026-04-13)
 
 
