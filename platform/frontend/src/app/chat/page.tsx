@@ -639,7 +639,8 @@ export function ChatPageContent({
     ) {
       return "organization";
     }
-    return null;
+    // Model doesn't match any default — it was explicitly chosen by the user
+    return "user";
   }, [
     conversation?.selectedModel,
     conversation?.agentId,
@@ -684,6 +685,9 @@ export function ChatPageContent({
     const modelInfo = chatModelsRef.current.find((m) => m.id === model);
     const provider = modelInfo?.provider;
 
+    // Persist user's model choice so the "user override" chip displays
+    saveModelOverride(model);
+
     updateConversationMutateRef.current({
       id: conversationRef.current.id,
       selectedModel: model,
@@ -703,6 +707,8 @@ export function ChatPageContent({
         modelsByProvider,
       });
       if (preferredModel) {
+        // Save model override when user changes API key/provider
+        saveModelOverride(preferredModel.modelId);
         updateConversationMutateRef.current({
           id: conversation.id,
           chatApiKeyId: apiKeyId,
